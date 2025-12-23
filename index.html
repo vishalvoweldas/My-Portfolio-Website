@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vishal Voweldas - Aspiring Digital Specialist Engineer | AI & Backend Developer. Portfolio showcasing AI projects, backend development, and machine learning solutions.">
+    <meta name="keywords"
+        content="AI Developer, Backend Developer, Machine Learning, Java, Spring Boot, Python, Portfolio">
+    <meta name="author" content="Vishal Voweldas">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vishal Voweldas - AI & Backend Developer Portfolio">
+    <meta property="og:description"
+        content="Aspiring Digital Specialist Engineer specializing in AI, Backend Development, and Machine Learning">
+    <meta property="og:type" content="website">
+
+    <title>Vishal Voweldas - AI & Backend Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resume-modal.css">
+    <link rel="stylesheet" href="skills-section.css">
+    <link rel="stylesheet" href="achievements-section.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Initialize EmailJS with your public key
+            // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+            emailjs.init('v_0dj1SK0oB9z2mxf');
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">Vishal.</a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">What I Do</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#journey" class="nav-link">Experience</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <!-- <li><a href="#contact" class="btn btn-primary">Connect Me</a></li> -->
+
+            </ul>
+
+            <!-- Mobile Controls (Theme Toggle + Nav Toggle) -->
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in-up">
+                    <span class="badge hero-badge">👋 Hello there!</span>
+                    <h1 class="hero-title">
+                        I'm <span class="highlight-text">Vishal Voweldas</span>,<br>
+                        AI & Backend Developer<br>
+                        Based in India
+                    </h1>
+                    <p class="hero-description">
+                        Graduate in B.Tech Artificial Intelligence and Data Science with a strong foundation in backend
+                        development, machine learning, and scalable software engineering. Skilled in building
+                        intelligent, data-driven systems using modern technologies such as Java, Spring Boot, Python,
+                        and Large Language Models (LLMs).
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="viewResumeBtn">
+                            View Resume
+                            <span class="btn-icon">→</span>
+                        </button>
+                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg"></div>
+                    <img src="Profile.jpg" alt="Vishal Voweldas - AI & Backend Developer" class="hero-image">
+                    <span class="hero-floating-label">💻 Backend Developer</span>
+                    <span class="hero-floating-label">🤖 AI Engineer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS MARQUEE
+         ============================================ -->
+    <div class="skills-marquee">
+        <div class="marquee-content">
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Spring Boot</span>
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">Machine Learning</span>
+            <span class="marquee-item">TensorFlow</span>
+            <span class="marquee-item">MySQL</span>
+            <span class="marquee-item">REST APIs</span>
+            <span class="marquee-item">Flask</span>
+            <span class="marquee-item">NLP</span>
+            <span class="marquee-item">LLMs</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee-item">Java</span>
+            <span class="marquee-item">Spring Boot</span>
+            <span class="marquee-item">Python</span>
+            <span class="marquee-item">Machine Learning</span>
+            <span class="marquee-item">TensorFlow</span>
+            <span class="marquee-item">MySQL</span>
+            <span class="marquee-item">REST APIs</span>
+            <span class="marquee-item">Flask</span>
+            <span class="marquee-item">NLP</span>
+            <span class="marquee-item">LLMs</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         WHAT I DO / SERVICES SECTION
+         ============================================ -->
+    <section class="section section-alt" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-subtitle">
+                    Passionate about creating impactful solutions that bridge AI innovation with real-world applications
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="card reveal">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Backend Development</h3>
+                    <p class="card-description">
+                        Build robust, scalable RESTful APIs and systems using Java, Spring Boot, Hibernate, and MySQL.
+                        Expertise in designing databases and optimizing queries for performance.
+                    </p>
+                    <a href="#projects" class="card-link">
+                        View Projects →
+                    </a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">AI Engineering</h3>
+                    <p class="card-description">
+                        Develop and deploy machine learning models, NLP pipelines, and LLM-powered applications with
+                        Python, TensorFlow, and Hugging Face transformers.
+                    </p>
+                    <a href="#projects" class="card-link">
+                        View Projects →
+                    </a>
+                </div>
+
+                <div class="card reveal">
+                    <div class="card-icon">🌐</div>
+                    <h3 class="card-title">Full-Stack Integration</h3>
+                    <p class="card-description">
+                        Create end-to-end web applications with Flask, HTML/CSS, and JavaScript, integrating AI models
+                        into production-ready interfaces.
+                    </p>
+                    <a href="#projects" class="card-link">
+                        View Projects →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION - CATEGORIZED
+         ============================================ -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">
+                    My technical expertise across various domains of software development
+                </p>
+            </div>
+
+            <div class="skills-categories">
+                <!-- Languages & Web -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">💻</span>
+                        <h3 class="skill-category-title">Languages & Web</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- AI/ML Frameworks -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🤖</span>
+                        <h3 class="skill-category-title">AI/ML Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Large Language Models (LLMs)</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                    </div>
+                </div>
+
+                <!-- Web & Backend -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">⚙️</span>
+                        <h3 class="skill-category-title">Web & Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Spring MVC</span>
+                        <span class="skill-tag">Hibernate (JPA)</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">JDBC</span>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">📊</span>
+                        <h3 class="skill-category-title">Data Science</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Data Analysis & Preprocessing</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🗄️</span>
+                        <h3 class="skill-category-title">Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">OOPS</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">SDLC</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <span class="skill-category-icon">🔧</span>
+                        <h3 class="skill-category-title">Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION
+         ============================================ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A showcase of my recent work in AI, machine learning, and backend development
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: AI Email Assistant -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/ai-email-assistant.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">BART</span>
+                            <span class="tag">GPT-2</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                        <h3 class="project-title">AI Personal Email Assistant</h3>
+                        <p class="project-description">
+                            LLM-powered automation system using transformer models for email summarization, intent
+                            detection, and automated formal replies. Integrated Gmail, Slack, and Calendar APIs for
+                            smart scheduling.
+                        </p>
+                        <p class="project-description">
+                            <strong>✅ 92% classification accuracy | 70% reduction in manual email handling time</strong>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Crop Forecasting -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/crop-forecasting.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <h3 class="project-title">AI-Powered Crop Forecasting System</h3>
+                        <p class="project-description">
+                            Deep learning model with two hidden layers (Tanh + Softmax) for multi-class crop prediction.
+                            Deployed as a web application to assist farmers with data-driven decisions.
+                        </p>
+                        <p class="project-description">
+                            <strong>✅ 98% prediction accuracy | Web-deployed for user accessibility</strong>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas/AI-Powered-Forecasting-for-Agriculture-Productivity-"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Shopping Mall Management -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/shopping-mall.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                        <h3 class="project-title">Shopping Mall Management System</h3>
+                        <p class="project-description">
+                            Full CRUD backend system with relational database integration for managing shops, inventory,
+                            and customer data. Validated APIs via Postman with efficient data flow.
+                        </p>
+                        <p class="project-description">
+                            <strong>✅ Complete REST API implementation | Efficient database design</strong>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Polyglot AI -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/polyglot-ai.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">SVM</span>
+                        </div>
+                        <h3 class="project-title">Polyglot AI - Language Detection & Translation</h3>
+                        <p class="project-description">
+                            NLP system to detect 10 languages with high accuracy using TF-IDF and Linear SVM. Provides
+                            seamless translation to English via Google Translate API, deployed as REST API.
+                        </p>
+                        <p class="project-description">
+                            <strong>✅ 93% detection accuracy | Multi-language support</strong>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas/Polyglot-AI---Language-Detection-and-Translation-System"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: ClearView -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/clearview-air-quality.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Analytics</span>
+                            <span class="tag">Jupyter</span>
+                        </div>
+                        <h3 class="project-title">ClearView - Interactive Air Quality Insights</h3>
+                        <p class="project-description">
+                            Interactive data analytics platform for air quality monitoring and insights. Provides
+                            real-time visualization and analysis of environmental data.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas/ClearView-Interactive-Air-Quality-Insights"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Core Java Projects -->
+                <div class="project-card reveal">
+                    <div class="project-image"
+                        style="background-image: url('project-images/java-projects.png'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">OOP</span>
+                            <span class="tag">JDBC</span>
+                        </div>
+                        <h3 class="project-title">Core Java Projects</h3>
+                        <p class="project-description">
+                            Collection of Java projects demonstrating core programming concepts, object-oriented
+                            principles, and database connectivity using JDBC.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/vishalvoweldas/Corejava" target="_blank"
+                                rel="noopener noreferrer" class="project-link">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         JOURNEY (EDUCATION & EXPERIENCE) - VERTICAL TIMELINE
+         ============================================ -->
+    <section class="section section-alt" id="journey">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Education & Work Experience</h2>
+                <p class="section-subtitle">
+                    My professional journey and academic background
+                </p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 - Left -->
+                <div class="timeline-item timeline-left reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="calendar-icon">📅</i>
+                            Jan 2024 - Jun 2024
+                        </div>
+                        <h3 class="timeline-title">Software Development Intern</h3>
+                        <h4 class="timeline-company">TNS India Foundation</h4>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Gained hands-on experience in Core Java, Spring Boot, JDBC, and MySQL for backend
+                                    development</li>
+                                <li>Applied OOPS principles and SDLC practices to build and test backend modules</li>
+                                <li>Designed and integrated RESTful APIs with database connectivity through real-world
+                                    mini-projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 2 - Right -->
+                <div class="timeline-item timeline-right reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="calendar-icon">📅</i>
+                            2021 - 2025
+                        </div>
+                        <h3 class="timeline-title">B.Tech in Artificial Intelligence and Data Science</h3>
+                        <h4 class="timeline-company">University/College</h4>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Comprehensive study of AI, machine learning, data science, and software engineering
+                                    principles</li>
+                                <li>Focus on practical applications and real-world problem solving</li>
+                                <li>Strong foundation in algorithms, data structures, and modern development practices
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 3 - Left: Intermediate -->
+                <div class="timeline-item timeline-left reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="calendar-icon">📅</i>
+                            March 2021
+                        </div>
+                        <h3 class="timeline-title">Intermediate</h3>
+                        <h4 class="timeline-company">Narayana Junior College, Hyderabad</h4>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Completed intermediate education with 91.6% aggregate</li>
+                                <li>Strong foundation in Mathematics, Physics, and Chemistry</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 4 - Right: School -->
+                <div class="timeline-item timeline-right reveal">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="calendar-icon">📅</i>
+                            March 2019
+                        </div>
+                        <h3 class="timeline-title">Secondary School Education</h3>
+                        <h4 class="timeline-company">Vaishnavi High School, Hyderabad</h4>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Completed schooling with 8.7 GPA</li>
+                                <li>Built strong academic foundation across all subjects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ACHIEVEMENTS & CERTIFICATIONS
+         ============================================ -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <p class="section-subtitle">
+                    Professional certifications and accomplishments
+                </p>
+            </div>
+
+            <div class="achievements-grid">
+                <!-- Achievement Card 1 -->
+                <div class="achievement-card reveal">
+                    <div class="achievement-badge">
+                        <span class="badge-icon">🏆</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Career Essentials in Generative AI</h3>
+                        <div class="achievement-issuer">
+                            <span class="issuer-icon">🏢</span>
+                            <span>Microsoft & LinkedIn</span>
+                        </div>
+                        <div class="achievement-date">
+                            <span class="date-icon">📅</span>
+                            <span>2024</span>
+                        </div>
+                        <p
+                            style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-grey); line-height: 1.6;">
+                            Foundational training in AI, generative models, ethical AI use, search evolution, and
+                            productivity tools.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 2 -->
+                <div class="achievement-card reveal">
+                    <div class="achievement-badge">
+                        <span class="badge-icon">💻</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Campus to Technical Careers – Full Stack Training</h3>
+                        <div class="achievement-issuer">
+                            <span class="issuer-icon">🎓</span>
+                            <span>Industry-Focused Training Program</span>
+                        </div>
+                        <div class="achievement-date">
+                            <span class="date-icon">📅</span>
+                            <span>2024</span>
+                        </div>
+                        <p
+                            style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-grey); line-height: 1.6;">
+                            Completed full-stack training in Java, Spring Boot, MySQL, Git, and web technologies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement Card 3 -->
+                <div class="achievement-card reveal">
+                    <div class="achievement-badge">
+                        <span class="badge-icon">🌐</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Impact Lecture on IoT Application Development</h3>
+                        <div class="achievement-issuer">
+                            <span class="issuer-icon">🏛️</span>
+                            <span>AICTE-Sponsored Program</span>
+                        </div>
+                        <div class="achievement-date">
+                            <span class="date-icon">📅</span>
+                            <span>2024</span>
+                        </div>
+                        <p
+                            style="margin-top: 1rem; font-size: 0.875rem; color: var(--color-text-grey); line-height: 1.6;">
+                            Attended AICTE-sponsored IoT application development lecture covering core concepts and
+                            applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-content reveal">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                    vision.
+                </p>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Saketh" required
+                                aria-required="true">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Saketh@example.com" required aria-required="true">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6"
+                            placeholder="Tell me about your project or idea..." required
+                            aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Send Message
+                        <span class="btn-icon">→</span>
+                    </button>
+
+                    <!-- Form Status Messages -->
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+
+
+
+                <div class="social-links">
+                    <a href="https://github.com/vishalvoweldas" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="GitHub Profile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/voweldas-vishal" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="LinkedIn Profile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:vishalvoweldas67@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <p style="margin-top: var(--spacing-lg); font-style: italic; color: var(--color-text-light);">
+                    "Building tomorrow's solutions with today's technology — one commit at a time."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RESUME MODAL (for mobile devices)
+         ============================================ -->
+    <div class="resume-modal" id="resumeModal">
+        <div class="resume-modal-overlay" id="resumeModalOverlay"></div>
+        <div class="resume-modal-content">
+            <button class="resume-modal-close" id="resumeModalClose" aria-label="Close resume modal">&times;</button>
+            <h2>My Resume</h2>
+
+            <!-- Desktop: PDF Viewer -->
+            <div class="resume-pdf-viewer" id="resumePdfViewer">
+                <iframe src="resume.pdf" frameborder="0" id="resumeIframe"></iframe>
+            </div>
+
+            <!-- Mobile: Image Preview -->
+            <div class="resume-preview" id="resumePreview">
+                <img src="resume-preview.jpg" alt="Resume Preview" id="resumePreviewImg">
+            </div>
+            <div class="resume-actions">
+                <a href="resume.pdf" download="Vishal_Voweldas_Resume.pdf" class="btn btn-primary" id="downloadPdfBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path
+                            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                    </svg>
+                    Open Full PDF
+                </a>
+                <a href="resume.pdf" download="Vishal_Voweldas_Resume.pdf" class="btn btn-secondary"
+                    id="downloadPdfBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                    </svg>
+                    Download PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-single-line">
+                <p>&copy; 2024 Vishal Voweldas. All rights reserved.</p>
+
+                <div class="footer-quick-links">
+                    <a href="#home">What I Do</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#journey">Experience</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
