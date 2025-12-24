@@ -708,18 +708,63 @@ function addMessage(text, isUser = false) {
 
 function botResponse(input) {
     const lowerInput = input.toLowerCase();
-    let response = "I'm not sure about that, but you can email Vishal at vishalvoweldas67@gmail.com!";
+    let response = "";
+    let matched = false;
 
-    if (lowerInput.includes('hello') || lowerInput.includes('hi')) {
-        response = "Hello! I can tell you about Vishal's projects, skills, or experience. What are you looking for?";
-    } else if (lowerInput.includes('project')) {
-        response = "Vishal has worked on AI Email Assistants, Crop Forecasting, and more! Check the Projects section for details.";
-    } else if (lowerInput.includes('skill')) {
-        response = "His top skills include Python, ML, Java, and Spring Boot. He loves building AI-driven solutions!";
-    } else if (lowerInput.includes('hire') || lowerInput.includes('contact')) {
-        response = "You can reach Vishal via the contact form on this page or through LinkedIn.";
+    // 1. Define Intents and Keywords
+    const intents = [
+        {
+            name: "greeting",
+            keywords: ["hi", "hello", "hey", "greetings"],
+            response: "Hello! I'm Vishal's AI Assistant. I can help you explore his skills, projects, or find his contact details. What would you like to know?"
+        },
+        {
+            name: "help",
+            keywords: ["help", "what do you", "can you do", "interact", "guide", "menu"],
+            response: "I can help you learn about Vishal's:\n• 💻 Skills & Expertise\n• 📂 Projects & Portfolio\n• 🐱 GitHub Repositories\n• 💼 LinkedIn Profile\n• 📧 Contact Information\n\nJust type a keyword like 'projects' or 'github' to get started!"
+        },
+        {
+            name: "skills",
+            keywords: ["skill", "stack", "tech", "language", "python", "java", "ml", "ai", "backend", "spring"],
+            response: "Vishal is a specialist in AI and Backend Development. His core stack includes:\n• Languages: Java, Python, SQL\n• Frameworks: Spring Boot, Flask, TensorFlow, Scikit-Learn\n• Specialties: LLMs, NLP, and Scalable Backend Systems.\n\nWould you like to see his projects in these areas?"
+        },
+        {
+            name: "projects",
+            keywords: ["project", "work", "built", "portfolio", "case study", "apps"],
+            response: "Vishal has built some impressive AI systems, including an AI Email Assistant, a Crop Forecasting tool, and a Language Detection system. You can explore them all in detail in the 'Featured Projects' section above!\n\nWant to see the code on GitHub?"
+        },
+        {
+            name: "github",
+            keywords: ["github", "repo", "code", "git", "source"],
+            response: "You can find all of Vishal's open-source projects and code samples on GitHub here:\n🐱 github.com/vishalvoweldas\n\nHe maintains clean, well-documented repositories for his AI and Backend work."
+        },
+        {
+            name: "linkedin",
+            keywords: ["linkedin", "profile", "connect", "social"],
+            response: "Let's connect professionally! You can find Vishal's LinkedIn profile here:\n💼 linkedin.com/in/voweldas-vishal\n\nHe's always open to networking with fellow developers and AI enthusiasts."
+        },
+        {
+            name: "contact",
+            keywords: ["contact", "hire", "email", "collaborate", "reach", "message"],
+            response: "You can reach out to Vishal through several channels:\n📧 Email: vishalvoweldas67@gmail.com\n💼 LinkedIn: linkedin.com/in/voweldas-vishal\n🐱 GitHub: github.com/vishalvoweldas\n\nAlternatively, you can use the contact form just below this chat window!"
+        }
+    ];
+
+    // 2. Intent Detection
+    for (const intent of intents) {
+        if (intent.keywords.some(keyword => lowerInput.includes(keyword))) {
+            response = intent.response;
+            matched = true;
+            break;
+        }
     }
 
+    // 3. Fallback Handling
+    if (!matched) {
+        response = "I'm not exactly sure about that, but I'd love to help you with something else! I can tell you about Vishal's skills, projects, github, or how to contact him. What's on your mind?";
+    }
+
+    // Add a slight delay for realism
     setTimeout(() => addMessage(response), 500);
 }
 
@@ -737,6 +782,18 @@ if (sendChat) {
         if (e.key === 'Enter') {
             sendChat.click();
         }
+    });
+
+    // Handle suggestion chips
+    const suggestionChips = document.querySelectorAll('.suggestion-chip');
+    suggestionChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            const query = chip.getAttribute('data-query');
+            addMessage(chip.textContent, true);
+            botResponse(query);
+            // Optional: hide suggestions after first interaction
+            // document.getElementById('chatbotSuggestions').style.display = 'none';
+        });
     });
 }
 

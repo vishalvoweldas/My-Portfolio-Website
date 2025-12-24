@@ -1,9 +1,6 @@
 /* ============================================
    INTERACTIVE ELEMENTS - TERMINAL
    ============================================ */
-.terminal-section {
-    /* Standardized with section-alt */
-}
 
 .terminal-section .section-header {
     margin-bottom: var(--spacing-md);
@@ -370,6 +367,43 @@ body.dark-mode .result-card {
     background-color: var(--color-primary-yellow);
     color: var(--color-primary-dark);
     align-self: flex-end;
+}
+
+.chatbot-suggestions {
+    padding: 0 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background-color: var(--color-background-white);
+}
+
+.suggestion-chip {
+    background-color: var(--color-background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    color: var(--color-text-grey);
+}
+
+.suggestion-chip:hover {
+    background-color: var(--color-primary-yellow);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-yellow);
+    transform: translateY(-2px);
+}
+
+body.dark-mode .chatbot-suggestions {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .suggestion-chip {
+    background-color: #333;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #ccc;
 }
 
 .chatbot-input-area {
