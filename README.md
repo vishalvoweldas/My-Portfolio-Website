@@ -124,7 +124,6 @@ This project is open source and available for personal use. Feel free to use it 
 
 ## 🙏 Acknowledgments
 
-- Design inspiration from [Behance Portfolio Design](https://www.behance.net/gallery/199733791/Personal-Portfolio-Website-UIUX-Design-Figma-Website)
 - Google Fonts for typography
 - AI-generated portrait for professional appearance
 
